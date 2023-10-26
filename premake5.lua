@@ -6,12 +6,12 @@ workspace "OpenGL_starter_template"
 		"Release"
 	}
 
-	startproject "OpenGL_Editor"
+	startproject "Project_name"
 
 outDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Project_name"
-	location "OpenGL_Editor"
+	location "Project_name"
 	kind "ConsoleApp"
 	language "C++"
 
@@ -36,12 +36,14 @@ project "Project_name"
 	includedirs {
 		--GLAD
 		"%{wks.location}/Dependencies/GLAD/include",
-
 		--GLFW
 		"%{wks.location}/Dependencies/GLFW/include",
-
+		--GLM
+		"%{wks.location}/Dependencies/GLM",
+		--stb_img
+		"%{wks.location}/Dependencies/stb_img",
 		--ImGui
-		"%{prj.name}/dependencies/ImGui",
+		"%{prj.name}/dependencies/ImGui"
 	}
 
 	libdirs {

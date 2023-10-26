@@ -17,3 +17,5 @@ ipch
 *.suo
 *.VC.db
 *.VC.VC.opendb
+
+## ImGui files
